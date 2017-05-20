@@ -1,0 +1,29 @@
+<html>
+<body>
+<script>
+	function charFreq(s){
+		var d={}
+		for(var i=0;i<s.length;i++){
+			var ch=s.charAt(i);
+			if(d[ch]){
+				d[ch]++;
+			}
+			else{
+				d[ch]=1;
+			}
+		}
+		return d;
+	}
+	
+	s=window.prompt("Enter string to find freq of char");
+	var dict=charFreq(s);
+
+	var res='';
+	for(var char in dict){
+		res+=char+" : "+dict[char]+"<br>";
+	}
+	document.write(res);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+const getQ=require('./q9a_module_queue.js');
+const getSt=require('./q9a_module_stck.js');
+const n=3;
+const m=8;
+const o=5;
+getQ.insert(n);
+getQ.insert(m);
+getQ.dequeue();
+getSt.push(o);
+getSt.pop();
+getSt.pop();
+getSt.pop();

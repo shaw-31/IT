@@ -1,0 +1,28 @@
+<html>
+<body>
+<script type="text/javascript">
+	function calcSGPA(){
+		sgpa=[]
+		for(var i=0;i<4;i++){
+			credits=prompt("Enter credits obtained in sem "+(i+1));
+			tot_credits=prompt("Enter total credits in sem "+(i+1));
+			function calsgpa(){
+			sgpa[i]=((credits/tot_credits)*10);   //check for closure here.
+		}
+		calsgpa();
+		}
+		document.write("SGPA,semester wise:"+sgpa);
+		function calcCGPA(){
+			var cgpa=0;
+			cgpa=sgpa[0];
+			for(var j=1;j<4;j++){
+				cgpa=(sgpa[j]+cgpa)/2;
+			}
+			document.write("<br>Overall CGPA is "+cgpa);
+		}
+		calcCGPA();
+	}
+	calcSGPA();	
+</script>
+</body>
+</html>
